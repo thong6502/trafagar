@@ -1,0 +1,119 @@
+.review {
+  margin-top: 250px;
+  &-item{
+    background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+    border-radius: 24px;
+    padding: 64px 80px 79px;
+    color: #fff;
+    margin-bottom: 42px;
+    position: relative;
+}
+  &-content{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 30px;
+  }
+  &-heading {
+    color: #fff;
+    &::before {
+      background-color: #fff;
+    }
+    margin-bottom: 66px;
+  }
+  &-customer{
+    display:flex;
+    align-items: center;
+}
+  &-img{
+    width: max-content;
+    flex-shrink: 0;
+    margin-right: 29px;
+    img {
+      width: 141px;
+      height: 141px;
+      border-radius: 100rem;
+      object-fit: cover;
+    }
+}
+  &-name{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: calc(48 / 22);
+}
+  &-job{
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+}
+  &-desc{
+    max-width: 420px;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: calc(30 / 19);
+    color: rgba(255, 255, 255, 0.9);
+}
+  @media screen and (max-width: 1023.98px) {
+    margin-top: 150px;
+    &-item {
+      padding: 64px 20px 79px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &-content{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: none;
+    grid-gap: 30px 0;
+  }
+  }
+}
+// custom slick slider
+.review {
+  &-list {
+    .slick-arrow {
+      border: none;
+      background-color: transparent;
+      color: #458FF6;
+      font-size: 23px;
+      position: absolute;
+      bottom: 0;
+    }
+    .slick-prev {
+      left: 35%;
+    }
+    .slick-next {
+      right: 35%;
+    }
+    .slick-dots {
+      list-style: none;
+      display:flex !important;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 18px;
+      li {
+        padding-bottom: 11px;
+      }
+      button {
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 100rem;
+        border: none;
+        outline: none;
+        background: #5B9BF3;
+        opacity: 0.3;
+      }
+      .slick-active {
+        button {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &-list {
+      .slick-arrow {
+        display: none !important;
+      }
+    }
+  }
+  
+}

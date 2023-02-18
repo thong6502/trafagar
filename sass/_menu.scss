@@ -1,0 +1,46 @@
+.menu {
+  // facb
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 40px;
+  &-link {
+    color: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    // tsall
+    transition: all 0.2s linear;
+  }
+  &-link:hover {
+    color: $black;
+    font-weight: bold;
+  }
+}
+.menu-toggle {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-left: 32px;
+    transform: translateX(100%);
+    transition: all 0.2s linear;
+  }
+  .menu-toggle {
+    display: initial;
+  }
+}

@@ -1,0 +1,42 @@
+.hero {
+  margin-bottom: 190px;
+  &-main{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 34px;
+}
+  &-content{
+    width: 100%;
+    max-width: 445px;
+}
+  &-heading{
+    color: $black;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: calc(56 / 48);
+    margin-bottom: 25px;
+}
+  &-desc{
+    color: #7D7987;
+    font-size: 21px;
+    line-height: calc(32 / 21);
+    margin-bottom: 45px;
+}
+@media screen and (max-width: 1023.98px) {
+  margin-bottom: 100px;
+  &-heading {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  margin-bottom: 70px;
+  &-main {
+    flex-direction: column-reverse;
+  }
+  &-desc {
+    margin-bottom: 25px;
+  }
+}
+
+}
